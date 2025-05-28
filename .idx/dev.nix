@@ -18,6 +18,9 @@
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
+      onStart = {
+        wait-for-adb = "adb -s localhost:5555 wait-for-device";
+      };
       onCreate = {
         build-flutter = ''
           cd /home/user/myapp/android
