@@ -1,6 +1,6 @@
-# myapp
+# tzine
 
-A new Flutter project.
+A Restaurant Application For Advertising Local Dines Areas
 
 ## Getting Started
 

@@ -22,21 +22,26 @@ class _HomeScreenState extends State<HomeScreen> {
     
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          spacing: 2,
+        automaticallyImplyLeading: false,
+        title: Column(
           children: [
-            Text(
-              ' Good\n Afternoon',
-              style: TextStyle(
-                height: 0.9,
-                fontSize: 42,
-                fontFamily: 'Caveat',
-                color: Color.fromARGB(255, 65, 0, 0),
-              ),
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              spacing: 2,
+              children: [
+                Text(
+                  'Good\nAfternoon',
+                  style: TextStyle(
+                    height: 0.9,
+                    fontSize: 34,
+                    fontFamily: 'Caveat',
+                    color: Color.fromARGB(255, 65, 0, 0),
+                  ),
+                ),
+                SvgPicture.asset("assets/icons/logo-light.svg"),
+              ],
             ),
-            SvgPicture.asset("assets/icons/logo-light.svg"),
           ],
         ),
       ),
