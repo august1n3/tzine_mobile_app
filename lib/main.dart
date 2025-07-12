@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tzine/pages/browse.dart';
 import 'package:tzine/pages/home.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
           seedColor: Color.fromARGB(255, 65, 0, 0),
         ),
       ),
-      home: const HomeScreen(),
+      home: const BrowseScreen(),
     );
   }
 }

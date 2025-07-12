@@ -9,13 +9,6 @@ class CustomNavigationBar extends StatefulWidget {
 }
 
 class _CustomNavigationBarState extends State<CustomNavigationBar> {
-  int _counter = 1;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,27 +27,27 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
           IconButton(
             iconSize: 50,
             color: Color.fromARGB(255, 255, 255, 255),
-            onPressed: _incrementCounter,
+            onPressed: null,
             tooltip: 'Increment',
             icon: SvgPicture.asset("assets/icons/navs/Home.svg"),
           ),
           IconButton(
             iconSize: 40,
             color: Color.fromARGB(255, 255, 255, 255),
-            onPressed: _incrementCounter,
+            onPressed: null,
             tooltip: 'Increment',
             icon: SvgPicture.asset("assets/icons/navs/search.svg"),
           ),
           IconButton(
             color: Color.fromARGB(255, 255, 255, 255),
-            onPressed: _incrementCounter,
+            onPressed: null,
             tooltip: 'Increment',
             icon: SvgPicture.asset("assets/icons/navs/Favourites.svg"),
           ),
           IconButton(
             iconSize: 40,
             color: Color.fromARGB(255, 255, 255, 255),
-            onPressed: _incrementCounter,
+            onPressed: null,
             tooltip: 'Increment',
             icon: SvgPicture.asset("assets/icons/navs/support.svg"),
           ),

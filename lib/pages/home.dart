@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tzine/components/navigation/custom_appbar.dart';
 import 'package:tzine/components/navigation/navigation_bar.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,13 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _counter = 1;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,27 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Column(
-          children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              spacing: 2,
-              children: [
-                Text(
-                  'Good\nAfternoon',
-                  style: TextStyle(
-                    height: 0.9,
-                    fontSize: 34,
-                    fontFamily: 'Caveat',
-                    color: Color.fromARGB(255, 65, 0, 0),
-                  ),
-                ),
-                SvgPicture.asset("assets/icons/logo-light.svg"),
-              ],
-            ),
-          ],
-        ),
+        title: CustomAppBar()
       ),
       body: Center(
         child: Column(
