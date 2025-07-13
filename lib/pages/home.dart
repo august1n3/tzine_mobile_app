@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tzine/components/navigation/custom_appbar.dart';
-import 'package:tzine/components/navigation/navigation_bar.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -147,7 +146,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: CustomNavigationBar() // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

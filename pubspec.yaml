@@ -65,6 +65,10 @@ flutter:
      - assets/icons/navs/Home.svg
      - assets/icons/navs//search.svg
      - assets/icons/navs/support.svg
+     - assets/icons/navs_filled/favourites.svg
+     - assets/icons/navs_filled/Home.svg
+     - assets/icons/navs_filled//search.svg
+     - assets/icons/navs_filled/support.svg
      - assets/images/cover.png
      - assets/images/icon.png
 

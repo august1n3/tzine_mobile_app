@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tzine/components/navigation/custom_appbar.dart';
-import 'package:tzine/components/navigation/navigation_bar.dart';
 import 'package:tzine/components/fields/search_bar.dart';
 class BrowseScreen extends StatefulWidget {
   const BrowseScreen({super.key});
@@ -28,8 +27,6 @@ class _BrowseScreenState extends State<BrowseScreen> {
         ),
       ),
       floatingActionButton: SearchInputField(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      bottomNavigationBar: CustomNavigationBar(),
-    );
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,    );
   }
 }
