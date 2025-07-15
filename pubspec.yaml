@@ -63,14 +63,21 @@ flutter:
      - assets/icons/star.svg
      - assets/icons/navs/Favourites.svg
      - assets/icons/navs/Home.svg
-     - assets/icons/navs//search.svg
+     - assets/icons/navs/search.svg
      - assets/icons/navs/support.svg
+     - assets/icons/navs/info.svg
+     - assets/icons/navs/menu.svg
+     - assets/icons/navs/reviews.svg
+     - assets/icons/navs_filled/info.svg
+     - assets/icons/navs_filled/menu.svg
+     - assets/icons/navs_filled/reviews.svg
      - assets/icons/navs_filled/favourites.svg
      - assets/icons/navs_filled/Home.svg
-     - assets/icons/navs_filled//search.svg
+     - assets/icons/navs_filled/search.svg
      - assets/icons/navs_filled/support.svg
      - assets/images/cover.png
      - assets/images/icon.png
+     - assets/images/Rectangle4.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

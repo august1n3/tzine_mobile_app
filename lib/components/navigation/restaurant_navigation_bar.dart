@@ -1,59 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-
-class CustomNavigationBar extends StatefulWidget {
+class RestaurantNavigationBar extends StatefulWidget {
   final int currentIndex; 
   final ValueChanged<int> onTap; 
 
-  const CustomNavigationBar({
+  const RestaurantNavigationBar({
     super.key,
     required this.currentIndex, 
     required this.onTap
   });
 
   @override
-  State<CustomNavigationBar> createState() => _CustomNavigationBarState();
+  State<RestaurantNavigationBar> createState() => _RestaurantNavigationBarState();
 }
 
-class _CustomNavigationBarState extends State<CustomNavigationBar> {
+class _RestaurantNavigationBarState extends State<RestaurantNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 15, left: 5, right: 5),
+      height: 60,
+      margin: EdgeInsets.fromLTRB(45, 0, 45, 15),
+      padding: const EdgeInsets.only(top: 0, bottom: 0, left: 0, right: 0),
       decoration: const BoxDecoration(
         color: Color.fromARGB(255, 65, 0, 0),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
-        ),
+        borderRadius: BorderRadius.all(Radius.circular(40))
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        spacing: 5,
         children: [
           _buildNavItem(
-            iconPath: "assets/icons/navs/Home.svg",
-            selectedIconPath: "assets/icons/navs_filled/Home.svg", 
+            iconPath: "assets/icons/navs/info.svg",
+            selectedIconPath: "assets/icons/navs_filled/info.svg", 
             index: 0,
-            tooltip: 'Home',
+            tooltip: 'Info',
           ),
           _buildNavItem(
-            iconPath: "assets/icons/navs/search.svg",
-            selectedIconPath: "assets/icons/navs_filled/search.svg", 
+            iconPath: "assets/icons/navs/menu.svg",
+            selectedIconPath: "assets/icons/navs_filled/menu.svg", 
             index: 1,
-            tooltip: 'Browse',
+            tooltip: 'Reviews',
           ),
           _buildNavItem(
-            iconPath: "assets/icons/navs/Favourites.svg",
-            selectedIconPath: "assets/icons/navs_filled/favourites.svg", 
+            iconPath: "assets/icons/navs/reviews.svg",
+            selectedIconPath: "assets/icons/navs_filled/reviews.svg", 
             index: 2,
-            tooltip: 'Favourites',
-          ),
-          _buildNavItem(
-            iconPath: "assets/icons/navs/support.svg",
-            selectedIconPath: "assets/icons/navs_filled/support.svg", 
-            index: 3,
-            tooltip: 'Support',
+            tooltip: 'Menu',
           ),
         ],
       ),
