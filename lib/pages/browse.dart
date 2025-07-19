@@ -12,9 +12,11 @@ class _BrowseScreenState extends State<BrowseScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor:  Color.fromARGB(255, 255, 241, 241),
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
-        title: CustomAppBar(),
+        title: CustomAppBar()
       ),
       body: Center(
         child: Column(

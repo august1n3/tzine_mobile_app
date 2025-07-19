@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tzine/main.dart';
@@ -14,19 +16,32 @@ class _RestaurantCardState extends State<RestaurantCard> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => RestaurantMainScreen()),
+        Timer(const Duration(seconds: 2), () {
+         Navigator.pushReplacement(
+          context, 
+          MaterialPageRoute(builder: (context) => RestaurantMainScreen() )
         );
+        });
       },
-      hoverColor: Color.fromARGB(255, 65, 0, 0),
-      splashColor: Color.fromARGB(255, 65, 0, 0),
+      borderRadius: BorderRadius.horizontal(left: Radius.circular(20), right: Radius.circular(20)),
+      splashColor: Color.fromARGB(141, 87, 6, 37),
       child: Container(
-        margin: EdgeInsets.fromLTRB(20, 0, 30, 0),
+        margin: EdgeInsets.all(8),
+        width: (MediaQuery.of(context).size.width * 0.9),
+        height: (MediaQuery.of(context).size.height * 0.27),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset("assets/images/cover.png"),
+            Container(
+              height: (MediaQuery.of(context).size.height * 0.2),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/Rectangle4.png"),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.horizontal(left: Radius.circular(20), right: Radius.circular(20)),
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,7 +71,9 @@ class _RestaurantCardState extends State<RestaurantCard> {
                 ),
                 Column(
                   children: [
-                    SvgPicture.asset("assets/icons/star.svg"),
+                    SvgPicture.asset(
+                      "assets/icons/star.svg"
+                      ),
                     Text(
                       "4.5",
                       style: TextStyle(
